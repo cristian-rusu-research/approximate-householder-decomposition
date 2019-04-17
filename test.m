@@ -19,7 +19,8 @@ S = S'*S;
 h = 2*round(log2(n));
 
 %% decompose the orthonormal Q into h Householder reflectors
-[U, X1, X2, theVs, tus, err, theVsoriginal] = optimizeHouseholder_decomposition(Q, h);
+[U1, X1_1, X2_1, theVs1, tus1, err1, theVsoriginal1] = optimizeHouseholder_decomposition(Q, h);
+% [U2, X1_2, X2_2, theVs2, tus2, err2, theVsoriginal2] = optimizeHouseholder_decomposition(-Q, h);
 
 %% the Symmetric Householder Factorization (SHF) algorithm
 % allow for spectrum update?
