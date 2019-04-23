@@ -23,9 +23,6 @@ S = S'*S;
 nplus = length(find(real(diag(D)) > 0));
 nminus = length(find(real(diag(D)) < 0));
 
-%% if total_spectrum is negative then it is better to decompose -Q, instead of Q
-total_spectrum = sum(diag(D));
-
 %% decompose the orthonormal Q into h Householder reflectors
 [U1, X1_1, X2_1, theVs1, tus1, err1, theVsoriginal1] = optimizeHouseholder_decomposition(Q, nminus);
 [U2, X1_2, X2_2, theVs2, tus2, err2, theVsoriginal2] = optimizeHouseholder_decomposition(-Q, nplus);
