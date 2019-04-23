@@ -31,6 +31,8 @@ total_spectrum = sum(diag(D));
 [U2, X1_2, X2_2, theVs2, tus2, err2, theVsoriginal2] = optimizeHouseholder_decomposition(-Q, nplus);
 
 %% the Symmetric Householder Factorization (SHF) algorithm
+% number of reflectors
+h = 2*round(log2(n));
 % allow for spectrum update?
 changeSpectrum = 1;
 % allow for a diagonal matrix update?
